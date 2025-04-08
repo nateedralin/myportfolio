@@ -1,3 +1,4 @@
+// smooth scrolling
 document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -5,4 +6,10 @@ document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
       behavior: 'smooth'
     });
   });
+});
+
+// theme toggling
+const toggleBtn = document.getElementById('toggleTheme');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light');
 });
