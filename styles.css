@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--soft-grey);
@@ -66,16 +70,25 @@ body {
   align-items: center;
   padding: 1rem 2rem;
   z-index: 998;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Updated nav logo */
 .nav-logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--soft-grey);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
+.nav-logo:hover {
+  color: var(--dusty-blue);
+}
+
+/* Nav links */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -93,6 +106,7 @@ body {
   color: var(--dusty-blue);
 }
 
+/* Mobile nav toggle */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -128,7 +142,7 @@ body {
   }
 }
 
-/* Hero Section with Parallax Background */
+/* Hero Section */
 header.hero {
   background: url('city.gif') center center / cover no-repeat fixed;
   padding: 6rem 2rem 4rem;
@@ -141,8 +155,10 @@ header.hero {
 header.hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(13, 27, 42, 0.6);
   z-index: -1;
 }
@@ -217,7 +233,7 @@ body.light header.hero::before {
   box-shadow: 0 0 20px var(--dusty-blue);
 }
 
-/* Sections */
+/* Section Layout */
 .section {
   padding: 4rem 2rem;
   background-color: var(--midnight-blue);
@@ -240,30 +256,7 @@ body.light header.hero::before {
   text-align: center;
 }
 
-/* Split About Layout */
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.about-image img {
-  max-width: 300px;
-  border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-}
-
-.about-text {
-  flex: 1;
-  min-width: 250px;
-  text-align: left;
-}
-
-/* Projects */
+/* Project / Experience Grid */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -283,22 +276,18 @@ body.light header.hero::before {
   transform: translateY(-5px);
 }
 
-/* Project Image Distortion */
 .project img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 0.8rem;
   margin-bottom: 1rem;
-  transition: transform 0.4s ease, filter 0.3s ease;
-  filter: grayscale(30%) contrast(110%);
-  mix-blend-mode: luminosity;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project a:hover img {
-  transform: scale(1.05) rotate(1deg);
-  filter: grayscale(0%) contrast(120%) saturate(130%);
-  mix-blend-mode: normal;
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .project h3 {
@@ -309,6 +298,13 @@ body.light header.hero::before {
 
 .project p {
   color: var(--dusty-blue);
+}
+
+.project ul {
+  text-align: left;
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  color: var(--soft-grey);
 }
 
 #contact p {
@@ -345,7 +341,8 @@ body.light .project {
 }
 
 body.light .project h3,
-body.light .project p {
+body.light .project p,
+body.light .project ul {
   color: var(--navy-blue);
 }
 
