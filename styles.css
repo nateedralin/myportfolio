@@ -9,7 +9,6 @@
   --font-body: 'Inter', sans-serif;
 }
 
-/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +23,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Theme Toggle */
 .theme-toggle {
   position: fixed;
   top: 1.5rem;
@@ -44,7 +42,6 @@ body {
   background-color: var(--dusty-blue);
 }
 
-/* Hero Section */
 header.hero {
   background-color: var(--steel-blue);
   padding: 6rem 2rem;
@@ -95,7 +92,6 @@ header.hero {
   color: white;
 }
 
-/* Profile Image */
 .hero-image {
   background: conic-gradient(from 180deg at 50% 50%, var(--steel-blue), var(--midnight-blue));
   padding: 5px;
@@ -118,7 +114,6 @@ header.hero {
   box-shadow: 0 0 20px var(--dusty-blue);
 }
 
-/* Sections */
 .section {
   padding: 4rem 2rem;
   background-color: var(--midnight-blue);
@@ -141,10 +136,9 @@ header.hero {
   text-align: center;
 }
 
-/* Projects */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -161,6 +155,20 @@ header.hero {
   transform: translateY(-5px);
 }
 
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project a:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
 .project h3 {
   color: var(--soft-grey);
   margin-bottom: 0.5rem;
@@ -170,12 +178,10 @@ header.hero {
   color: var(--dusty-blue);
 }
 
-/* Contact */
 #contact p {
   margin-bottom: 1rem;
 }
 
-/* Footer */
 footer {
   background-color: var(--navy-blue);
   text-align: center;
@@ -184,7 +190,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* LIGHT MODE */
+/* Light Theme */
 body.light {
   background-color: var(--soft-grey);
   color: var(--navy-blue);
