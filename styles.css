@@ -1,13 +1,23 @@
 :root {
+  /* Dark Theme Palette */
   --ash-gray: #BFC3BA;
   --silver: #A9ACA9;
   --eggplant: #60495A;
   --violet: #3F3244;
   --dark-purple: #2F2235;
+
+  /* Light Theme Palette */
+  --lavender-gray: #D5C9D0;
+  --soft-eggplant: #8C7A8C;
+  --light-violet: #B9AABF;
+  --light-bg: #F1EEF2;
+  --light-text: #3F3244;
+
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 }
 
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +31,7 @@ body {
   line-height: 1.6;
 }
 
+/* Hero Section */
 header.hero {
   background-color: var(--eggplant);
   padding: 6rem 2rem;
@@ -70,6 +81,7 @@ header.hero {
   background-color: var(--silver);
 }
 
+/* Profile Image Styling */
 .hero-image {
   background: conic-gradient(from 180deg at 50% 50%, #60495A, #2F2235, #60495A);
   padding: 5px;
@@ -92,6 +104,7 @@ header.hero {
   box-shadow: 0 0 20px var(--silver);
 }
 
+/* Sections */
 .section {
   padding: 4rem 2rem;
   background-color: var(--violet);
@@ -113,6 +126,7 @@ header.hero {
   text-align: center;
 }
 
+/* Projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -141,10 +155,12 @@ header.hero {
   color: var(--silver);
 }
 
+/* Contact */
 #contact p {
   margin-bottom: 1rem;
 }
 
+/* Footer */
 footer {
   background-color: var(--dark-purple);
   text-align: center;
@@ -153,6 +169,7 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Theme Toggle Button */
 .theme-toggle {
   position: fixed;
   top: 1.5rem;
@@ -172,34 +189,51 @@ footer {
   background-color: var(--silver);
 }
 
+/* Light Mode Styling */
 body.light {
-  background-color: #F7F7F7;
-  color: #333;
+  background-color: var(--light-bg);
+  color: var(--light-text);
 }
 
 body.light header.hero {
-  background-color: #fff;
-  color: #333;
+  background-color: var(--light-violet);
+  color: var(--light-text);
+}
+
+body.light .hero-text h1,
+body.light .hero-text p {
+  color: var(--light-text);
 }
 
 body.light .section {
-  background-color: #f0f0f0;
+  background-color: var(--lavender-gray);
 }
 
-body.light footer {
-  background-color: #ddd;
-  color: #333;
+body.light .section h2,
+body.light .section p,
+body.light .section a {
+  color: var(--light-text);
 }
 
 body.light .project {
-  background-color: #eaeaea;
+  background-color: var(--soft-eggplant);
+}
+
+body.light .project h3,
+body.light .project p {
+  color: var(--light-bg);
+}
+
+body.light footer {
+  background-color: var(--light-violet);
+  color: var(--light-text);
 }
 
 body.light .btn {
-  background-color: #333;
-  color: white;
+  background-color: var(--light-text);
+  color: var(--light-bg);
 }
 
 body.light .btn:hover {
-  background-color: #555;
+  background-color: var(--eggplant);
 }
