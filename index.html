@@ -8,9 +8,22 @@
   <script defer src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <button id="toggleTheme" class="theme-toggle">🌓</button>
+
+  <nav class="navbar">
+    <div class="nav-logo">Nathaniel</div>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <header class="hero">
     <div class="hero-content">
@@ -52,8 +65,16 @@
 
   <section id="contact" class="section" data-aos="fade-up" data-aos-delay="200">
     <h2>Let’s Connect!</h2>
-    <p>Email: <a href="mailto:nate.edralin@gmail.com">nate.edralin@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/nathaniel-edralin" target="_blank">@nathaniel-edralin</a></p>
+    <p>
+      <a href="mailto:nate.edralin@gmail.com" class="icon-link">
+        <i class="fas fa-envelope"></i> nate.edralin@gmail.com
+      </a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/nathaniel-edralin" target="_blank" class="icon-link">
+        <i class="fab fa-linkedin"></i> @nathaniel-edralin
+      </a>
+    </p>
   </section>
 
   <footer>
