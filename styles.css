@@ -88,7 +88,6 @@ body {
   color: var(--dusty-blue);
 }
 
-/* Nav links */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -106,7 +105,6 @@ body {
   color: var(--dusty-blue);
 }
 
-/* Mobile nav toggle */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -231,6 +229,26 @@ body.light header.hero::before {
 .hero-image:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px var(--dusty-blue);
+}
+
+/* About Section Layout */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-image img {
+  width: 300px;
+  max-width: 90vw;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Section Layout */
