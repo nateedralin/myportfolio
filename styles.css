@@ -32,7 +32,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  z-index: 999;
+  z-index: 998;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
@@ -96,24 +96,38 @@ body {
   }
 }
 
-/* Theme Toggle */
+/* Theme Toggle Icon Button */
 .theme-toggle {
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 5.5rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
   background-color: var(--soft-grey);
-  color: black;
+  border-radius: 50%;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
+  font-size: 1.2rem;
   cursor: pointer;
   z-index: 1000;
-  font-weight: bold;
-  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .theme-toggle:hover {
   background-color: var(--dusty-blue);
+}
+
+/* Smaller padding for mobile */
+@media (max-width: 480px) {
+  .theme-toggle {
+    top: 1.2rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
 }
 
 header.hero {
@@ -210,7 +224,6 @@ header.hero {
   text-align: center;
 }
 
-/* Project Section */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
