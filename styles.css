@@ -23,6 +23,80 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* NAVIGATION BAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--steel-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--soft-grey);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--soft-grey);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--dusty-blue);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--soft-grey);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    background-color: var(--steel-blue);
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+/* Theme Toggle */
 .theme-toggle {
   position: fixed;
   top: 1.5rem;
@@ -44,7 +118,7 @@ body {
 
 header.hero {
   background-color: var(--steel-blue);
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 4rem;
   text-align: center;
 }
 
@@ -136,6 +210,7 @@ header.hero {
   text-align: center;
 }
 
+/* Project Section */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -179,6 +254,21 @@ header.hero {
   color: var(--dusty-blue);
 }
 
+/* Contact Icons */
+.icon-link {
+  color: var(--dusty-blue);
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  color: var(--soft-grey);
+}
+
 #contact p {
   margin-bottom: 1rem;
 }
@@ -191,7 +281,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Light Mode */
+/* Light Theme */
 body.light {
   background-color: var(--soft-grey);
   color: var(--navy-blue);
