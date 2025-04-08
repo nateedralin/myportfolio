@@ -1,23 +1,15 @@
 :root {
-  /* Dark Theme Palette */
-  --ash-gray: #BFC3BA;
-  --silver: #A9ACA9;
-  --eggplant: #60495A;
-  --violet: #3F3244;
-  --dark-purple: #2F2235;
-
-  /* Light Theme Palette */
-  --lavender-gray: #D5C9D0;
-  --soft-eggplant: #8C7A8C;
-  --light-violet: #B9AABF;
-  --light-bg: #F1EEF2;
-  --light-text: #3F3244;
+  --light-beige: #DAD7CD;
+  --sage-green: #A3B18A;
+  --olive-green: #588157;
+  --deep-forest: #3A5A40;
+  --charcoal-green: #344E41;
 
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 }
 
-/* Reset & Base Styles */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -26,14 +18,13 @@
 
 body {
   font-family: var(--font-body);
-  color: var(--silver);
-  background-color: var(--dark-purple);
+  color: var(--light-beige);
+  background-color: var(--charcoal-green);
   line-height: 1.6;
 }
 
-/* Hero Section */
 header.hero {
-  background-color: var(--eggplant);
+  background-color: var(--olive-green);
   padding: 6rem 2rem;
   text-align: center;
 }
@@ -66,7 +57,7 @@ header.hero {
 }
 
 .btn {
-  background-color: var(--ash-gray);
+  background-color: var(--light-beige);
   color: black;
   padding: 0.7rem 1.5rem;
   text-decoration: none;
@@ -78,12 +69,11 @@ header.hero {
 }
 
 .btn:hover {
-  background-color: var(--silver);
+  background-color: var(--sage-green);
 }
 
-/* Profile Image Styling */
 .hero-image {
-  background: conic-gradient(from 180deg at 50% 50%, #60495A, #2F2235, #60495A);
+  background: conic-gradient(from 180deg at 50% 50%, var(--olive-green), var(--charcoal-green), var(--olive-green));
   padding: 5px;
   border-radius: 50%;
   display: inline-block;
@@ -95,19 +85,18 @@ header.hero {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--ash-gray);
+  border: 4px solid var(--light-beige);
   display: block;
 }
 
 .hero-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px var(--silver);
+  box-shadow: 0 0 20px var(--sage-green);
 }
 
-/* Sections */
 .section {
   padding: 4rem 2rem;
-  background-color: var(--violet);
+  background-color: var(--deep-forest);
 }
 
 .section h2 {
@@ -120,13 +109,12 @@ header.hero {
 
 .section p,
 .section a {
-  color: var(--silver);
+  color: var(--light-beige);
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* Projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -135,7 +123,7 @@ header.hero {
 }
 
 .project {
-  background-color: var(--eggplant);
+  background-color: var(--olive-green);
   padding: 1.5rem;
   border-radius: 1rem;
   transition: transform 0.3s;
@@ -152,29 +140,26 @@ header.hero {
 }
 
 .project p {
-  color: var(--silver);
+  color: var(--light-beige);
 }
 
-/* Contact */
 #contact p {
   margin-bottom: 1rem;
 }
 
-/* Footer */
 footer {
-  background-color: var(--dark-purple);
+  background-color: var(--charcoal-green);
   text-align: center;
   padding: 2rem;
-  color: var(--silver);
+  color: var(--light-beige);
   font-size: 0.9rem;
 }
 
-/* Theme Toggle Button */
 .theme-toggle {
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
-  background-color: var(--ash-gray);
+  background-color: var(--light-beige);
   color: black;
   border: none;
   padding: 0.5rem 1rem;
@@ -186,54 +171,53 @@ footer {
 }
 
 .theme-toggle:hover {
-  background-color: var(--silver);
+  background-color: var(--sage-green);
 }
 
-/* Light Mode Styling */
+/* Light Theme */
 body.light {
-  background-color: var(--light-bg);
-  color: var(--light-text);
+  background-color: #f3f3ef;
+  color: var(--charcoal-green);
 }
 
 body.light header.hero {
-  background-color: var(--light-violet);
-  color: var(--light-text);
+  background-color: var(--sage-green);
 }
 
 body.light .hero-text h1,
 body.light .hero-text p {
-  color: var(--light-text);
+  color: var(--charcoal-green);
 }
 
 body.light .section {
-  background-color: var(--lavender-gray);
+  background-color: #e1e6db;
 }
 
 body.light .section h2,
 body.light .section p,
 body.light .section a {
-  color: var(--light-text);
+  color: var(--charcoal-green);
 }
 
 body.light .project {
-  background-color: var(--soft-eggplant);
+  background-color: #c5d2bc;
 }
 
 body.light .project h3,
 body.light .project p {
-  color: var(--light-bg);
+  color: var(--charcoal-green);
 }
 
 body.light footer {
-  background-color: var(--light-violet);
-  color: var(--light-text);
+  background-color: #d7dfd1;
+  color: var(--charcoal-green);
 }
 
 body.light .btn {
-  background-color: var(--light-text);
-  color: var(--light-bg);
+  background-color: var(--charcoal-green);
+  color: var(--light-beige);
 }
 
 body.light .btn:hover {
-  background-color: var(--eggplant);
+  background-color: var(--deep-forest);
 }
