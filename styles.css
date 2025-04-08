@@ -1,0 +1,94 @@
+:root {
+  --ash-gray: #BFC3BA;
+  --silver: #A9ACA9;
+  --eggplant: #60495A;
+  --violet: #3F3244;
+  --dark-purple: #2F2235;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--silver);
+  background-color: var(--dark-purple);
+  line-height: 1.6;
+}
+
+header.hero {
+  background-color: var(--eggplant);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-family: var(--font-heading);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  background-color: var(--ash-gray);
+  color: black;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--silver);
+}
+
+.section {
+  padding: 4rem 2rem;
+  background-color: var(--violet);
+}
+
+.section h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.section p, .section a {
+  color: var(--silver);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project {
+  background-color: var(--eggplant);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background-color: var(--dark-purple);
+  text-align: center;
+  padding: 2rem;
+  color: var(--silver);
+  font-size: 0.9rem;
+}
