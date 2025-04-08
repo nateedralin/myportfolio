@@ -1,9 +1,9 @@
 :root {
-  --light-beige: #DAD7CD;
-  --sage-green: #A3B18A;
-  --olive-green: #588157;
-  --deep-forest: #3A5A40;
-  --charcoal-green: #344E41;
+  --navy-blue: #0D1B2A;
+  --midnight-blue: #1B263B;
+  --steel-blue: #415A77;
+  --dusty-blue: #778DA9;
+  --soft-grey: #E0E1DD;
 
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
@@ -18,13 +18,35 @@
 
 body {
   font-family: var(--font-body);
-  color: var(--light-beige);
-  background-color: var(--charcoal-green);
+  color: var(--soft-grey);
+  background-color: var(--navy-blue);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--soft-grey);
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--dusty-blue);
+}
+
+/* Hero Section */
 header.hero {
-  background-color: var(--olive-green);
+  background-color: var(--steel-blue);
   padding: 6rem 2rem;
   text-align: center;
 }
@@ -47,18 +69,18 @@ header.hero {
 .hero-text h1 {
   font-size: 3rem;
   font-family: var(--font-heading);
-  color: white;
+  color: var(--soft-grey);
 }
 
 .hero-text p {
   font-size: 1.2rem;
   margin: 1rem 0;
-  color: white;
+  color: var(--soft-grey);
 }
 
 .btn {
-  background-color: var(--light-beige);
-  color: black;
+  background-color: var(--soft-grey);
+  color: var(--navy-blue);
   padding: 0.7rem 1.5rem;
   text-decoration: none;
   border-radius: 2rem;
@@ -69,11 +91,13 @@ header.hero {
 }
 
 .btn:hover {
-  background-color: var(--sage-green);
+  background-color: var(--dusty-blue);
+  color: white;
 }
 
+/* Profile Image */
 .hero-image {
-  background: conic-gradient(from 180deg at 50% 50%, var(--olive-green), var(--charcoal-green), var(--olive-green));
+  background: conic-gradient(from 180deg at 50% 50%, var(--steel-blue), var(--midnight-blue));
   padding: 5px;
   border-radius: 50%;
   display: inline-block;
@@ -85,36 +109,39 @@ header.hero {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--light-beige);
+  border: 4px solid var(--soft-grey);
   display: block;
 }
 
 .hero-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px var(--sage-green);
+  box-shadow: 0 0 20px var(--dusty-blue);
 }
 
+/* Sections */
 .section {
   padding: 4rem 2rem;
-  background-color: var(--deep-forest);
+  background-color: var(--midnight-blue);
+  transition: background-color 0.3s ease;
 }
 
 .section h2 {
   font-family: var(--font-heading);
   font-size: 2rem;
-  color: white;
+  color: var(--soft-grey);
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .section p,
 .section a {
-  color: var(--light-beige);
+  color: var(--dusty-blue);
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
 
+/* Projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -123,7 +150,7 @@ header.hero {
 }
 
 .project {
-  background-color: var(--olive-green);
+  background-color: var(--steel-blue);
   padding: 1.5rem;
   border-radius: 1rem;
   transition: transform 0.3s;
@@ -135,89 +162,72 @@ header.hero {
 }
 
 .project h3 {
-  color: white;
+  color: var(--soft-grey);
   margin-bottom: 0.5rem;
 }
 
 .project p {
-  color: var(--light-beige);
+  color: var(--dusty-blue);
 }
 
+/* Contact */
 #contact p {
   margin-bottom: 1rem;
 }
 
+/* Footer */
 footer {
-  background-color: var(--charcoal-green);
+  background-color: var(--navy-blue);
   text-align: center;
   padding: 2rem;
-  color: var(--light-beige);
+  color: var(--soft-grey);
   font-size: 0.9rem;
 }
 
-.theme-toggle {
-  position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
-  background-color: var(--light-beige);
-  color: black;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  cursor: pointer;
-  z-index: 1000;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.theme-toggle:hover {
-  background-color: var(--sage-green);
-}
-
-/* Light Theme */
+/* LIGHT MODE */
 body.light {
-  background-color: #f3f3ef;
-  color: var(--charcoal-green);
+  background-color: var(--soft-grey);
+  color: var(--navy-blue);
 }
 
 body.light header.hero {
-  background-color: var(--sage-green);
+  background-color: var(--dusty-blue);
 }
 
 body.light .hero-text h1,
 body.light .hero-text p {
-  color: var(--charcoal-green);
+  color: var(--navy-blue);
 }
 
 body.light .section {
-  background-color: #e1e6db;
+  background-color: #dbe2e7;
 }
 
 body.light .section h2,
 body.light .section p,
 body.light .section a {
-  color: var(--charcoal-green);
+  color: var(--navy-blue);
 }
 
 body.light .project {
-  background-color: #c5d2bc;
+  background-color: #cbd7e5;
 }
 
 body.light .project h3,
 body.light .project p {
-  color: var(--charcoal-green);
+  color: var(--navy-blue);
 }
 
 body.light footer {
-  background-color: #d7dfd1;
-  color: var(--charcoal-green);
+  background-color: var(--dusty-blue);
+  color: var(--navy-blue);
 }
 
 body.light .btn {
-  background-color: var(--charcoal-green);
-  color: var(--light-beige);
+  background-color: var(--navy-blue);
+  color: var(--soft-grey);
 }
 
 body.light .btn:hover {
-  background-color: var(--deep-forest);
+  background-color: var(--steel-blue);
 }
