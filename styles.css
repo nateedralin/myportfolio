@@ -130,7 +130,7 @@ body {
 
 /* Hero Section with Parallax Background */
 header.hero {
-  background: url('assets/background.gif') center center / cover no-repeat fixed;
+  background: url('nyc.gif') center center / cover no-repeat fixed;
   padding: 6rem 2rem 4rem;
   text-align: center;
   position: relative;
