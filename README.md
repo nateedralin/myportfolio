@@ -4,9 +4,9 @@ Welcome to My Portfolio Website!
 
 In this website, I showcase:
 
-  🧍🏻 About Me
+  👨 About Me
   
-  🖥️ My Projects
+  💻 My Projects
   
   💼 Work Experience & Leadership Experience
 
