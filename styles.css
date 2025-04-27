@@ -73,7 +73,6 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Updated nav logo */
 .nav-logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -231,7 +230,7 @@ body.light header.hero::before {
   box-shadow: 0 0 20px var(--dusty-blue);
 }
 
-/* About Section Layout */
+/* About Section */
 .about-container {
   display: flex;
   align-items: center;
@@ -240,18 +239,41 @@ body.light header.hero::before {
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 .about-image img {
   width: 300px;
-  max-width: 90vw;
   height: auto;
   border-radius: 1rem;
   object-fit: cover;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
 }
 
-/* Section Layout */
+.about-image img:hover {
+  transform: scale(1.03);
+}
+
+.about-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--soft-grey);
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: var(--dusty-blue);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Sections (Projects, Work, Leadership, Contact) */
 .section {
   padding: 4rem 2rem;
   background-color: var(--midnight-blue);
@@ -274,7 +296,7 @@ body.light header.hero::before {
   text-align: center;
 }
 
-/* Project / Experience Grid */
+/* Grid Layout */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -323,10 +345,6 @@ body.light header.hero::before {
   margin-top: 1rem;
   padding-left: 1.2rem;
   color: var(--soft-grey);
-}
-
-#contact p {
-  margin-bottom: 1rem;
 }
 
 /* Footer */
